@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="./modal.js"></script>
+    <title>Modal - 1</title>
+  </head>
+  <body>
+    <h3>Modal Web Component 1</h3>
+    <button class="open">Open</button>
+
+    <simple-modal title="Important!">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat.
+      </p>
+    </simple-modal>
+  </body>
+  <script>
+    modal = document.querySelector("simple-modal");
+    modal.addEventListener("cancel", function () {
+      console.log("cancel event raised");
+    });
+    modal.addEventListener("ok", function () {
+      console.log("ok event raised");
+    });
+    open = document.querySelector(".open");
+    open.addEventListener("click", function () {
+      modal.visible = true;
+    });
+  </script>
+</html>

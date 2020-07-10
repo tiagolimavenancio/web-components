@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <script src="./modal.js"></script>
+  <body>
+    <h3>Modal Web Component 2</h3>
+    <button class="open">Open</button>
+
+    <modal-lab visible animate>
+      <div slot="title">It´s Important</div>
+      <div slot="body">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+      </div>
+    </modal-lab>
+  </body>
+  <script>
+    modal = document.querySelector("modal-lab");
+    open = document.querySelector(".open");
+    open.addEventListener("click", function () {
+      modal.visible = true;
+    });
+  </script>
+</html>
